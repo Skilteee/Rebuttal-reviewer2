@@ -29,9 +29,12 @@
 | W/ Norm (W/O divergence)  | 92.5 (2.3) | 76.8 (7.8) |
 | Vallina (W/ divergence)| 94.2 (1.2) | 81.2 (3.7) |
 
-**Table R.5.** Results of Finetuning OPT-2.7B on SST-2 for 1K iteraions. 
-|      | Optimizer | Acc. | Train FLOPs. | 
-|------|:---------:|:----:|:-----------:|
-| MeZO |    SGD    | 87.0 |     100%    | 
-| MeZo |    Adam   | 88.3 |    431%    | 
-| DiZO |    SGD    | 91.6 |     122%    |
+**Table R.5.** Results of Finetuning OPT-2.7B on SST-2. 
+|      |       Optimizer      | Acc. | Training FLOPs | Memory | Iter. |
+|------|:--------------------:|:----:|:--------------:|:------:|:-----:|
+| MeZO |          SGD         | 87.0 |      100%      | 6.8 GB |   2K  |
+| MeZO | Adam (Recompute) | 88.3 |      431%      | 6.8 GB |   2K  |
+| MeZO |     Adam (Store)     | 88.3 |     100.2%     | 17.6GB |   2K  |
+| DiZO |          SGD         | 88.4 |       61%      |  7.5GB |   1K  |
+| DiZO |          SGD         | 91.6 |      122%      |  7.5GB |   2K  |
+
